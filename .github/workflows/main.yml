@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x]
 
     steps:
     - name: Checkout
@@ -22,7 +22,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: NPM Install
-      run: npm run install
+      run: npm install
     - name: NPM Build
       run: npm run build
     - name: Deploy GH Pages
