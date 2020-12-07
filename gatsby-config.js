@@ -4,13 +4,19 @@ module.exports = {
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "abcd",
+        trackingId: "G-LRM107MFY2",
       },
     },
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-manifest",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "AJBitus",
+        icon: "./src/images/icon.png",
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -22,4 +28,7 @@ module.exports = {
       __key: "images",
     },
   ],
+  siteMetadata: {
+    siteUrl: "https://ajbitus.github.io",
+  },
 };

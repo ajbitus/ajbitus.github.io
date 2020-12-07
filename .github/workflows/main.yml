@@ -1,0 +1,35 @@
+name: Auto Publish
+
+on:
+  push:
+    branches: [ $default-branch ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x]
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: NPM Install
+      run: npm run install
+    - name: NPM Build
+      run: npm run build
+    - name: Compress Generated Static Site
+      uses: montudor/action-zip@v0.1.1
+      with:
+        args: zip -qq -r ${git branch | sed -n -e 's/^\* \(.*\)/\1/p'}-${git rev-parse --short HEAD}.zip docs
+    - name: Archive Release
+      uses: actions/upload-artifact@v2
+      with:
+        name: release-build
+        path: ${git branch | sed -n -e 's/^\* \(.*\)/\1/p'}-${git rev-parse --short HEAD}.zip
