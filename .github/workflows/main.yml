@@ -24,7 +24,7 @@ jobs:
       run: npm run install
     - name: NPM Build
       run: npm run build
-    - name: Deploy
+    - name: Deploy GH Pages
       uses: s0/git-publish-subdir-action@develop
       env:
         REPO: self
@@ -34,7 +34,7 @@ jobs:
     - name: Compress Generated Static Site
       uses: montudor/action-zip@v0.1.1
       with:
-        args: zip -qq -r ${git branch | sed -n -e 's/^\* \(.*\)/\1/p'}-${git rev-parse --short HEAD}.zip docs
+        args: zip -qq -r ${git branch | sed -n -e 's/^\* \(.*\)/\1/p'}-${git rev-parse --short HEAD}.zip public
     - name: Archive Release
       uses: actions/upload-artifact@v2
       with:
