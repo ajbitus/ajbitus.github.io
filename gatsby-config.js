@@ -60,11 +60,17 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-preload-link-crossorigin`,
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: `G-LRM107MFY2`
+      }
+    },
     `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "src",
+        name: `src`,
         path: `${__dirname}/src/`,
       },
     },
