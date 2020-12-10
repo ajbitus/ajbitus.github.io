@@ -12,19 +12,18 @@ $themes: (
     navBackground: $gray-100,
     secondary: $gray-900,
     textColor: $black,
-    firstName: orange,
+    firstName: $steel-blue,
     lastName: $black,
     linkHover: $gray-800,
     themeColor: $dark-blue,
-    heartColor: pink,
+    codeBranchColor: pink,
     titleColor: $dark-blue,
     hrefColor: $dark-blue,
     github: $black,
     linkedin: $linkedin-blue,
-    fcc: $fcc-green,
-    hr: $hr-green,
     mail: $yellow,
-    file: $dark-blue,
+    facebook: $fb-blue,
+    twitter: $tw-blue,
     iconBackground: $white,
     cardBackground: $white,
   ),
@@ -40,14 +39,13 @@ $themes: (
     titleColor: $white,
     hrefColor: $faded-red,
     themeColor: $dark-red,
-    heartColor: red,
-    github: $empire-red,
-    linkedin: $empire-red,
-    fcc: $empire-red,
-    hr: $empire-red,
-    mail: $empire-red,
-    file: $empire-red,
-    iconBackground: $black,
+    codeBranchColor: red,
+    github: $white,
+    linkedin: $linkedin-blue,
+    mail: $yellow,
+    facebook: $fb-blue,
+    twitter: $tw-blue,
+    iconBackground: #222,
     cardBackground: $dark-gray,
   ),
 );
@@ -109,15 +107,10 @@ $themes: (
   }
 }
 
-.footer {
+.code-branch {
+  text-decoration: none;
   @include themify($themes) {
-    background: themed("backgroundColor");
-  }
-}
-
-.heart {
-  @include themify($themes) {
-    color: themed("heartColor");
+    color: themed("codeBranchColor");
   }
 }
 
@@ -150,32 +143,47 @@ $themes: (
   }
 }
 
-.resume-tags {
+.profile-tags {
   @include themify($themes) {
     background: themed("navBackground");
   }
 }
 
+.icons {
+  width: 60px !important;
+}
+
 .icons:hover {
   @include themify($themes) {
     background: themed("iconBackground");
+    &.facebook {
+      color: themed("facebook");
+    }
+    &.twitter {
+      color: themed("twitter");
+    }
+    &.instagram {
+      width: 60px;
+      color: $white;
+      border-radius: 20px;
+      padding: 1px 10px;
+      background-image: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+      );
+    }
     &.github {
       color: themed("github");
     }
     &.linkedin {
       color: themed("linkedin");
     }
-    &.fcc {
-      color: themed("fcc");
-    }
-    &.hr {
-      color: themed("hr");
-    }
     &.mail {
       color: themed("mail");
-    }
-    &.file {
-      color: themed("file");
     }
   }
 }
@@ -199,5 +207,56 @@ div {
 p {
   @include themify($themes) {
     color: themed("textColor");
+  }
+}
+
+.footer {
+  @include themify($themes) {
+    background: themed("navBackground");
+    .footer-text {
+      background: themed("navBackground");
+    }
+    .footer-social {
+      background: themed("navBackground");
+    }
+  }
+}
+
+.social-icons {
+  width: 1.4rem !important;
+}
+
+.social-icons:hover {
+  @include themify($themes) {
+    background: themed("iconBackground");
+    &.facebook {
+      color: themed("facebook");
+    }
+    &.twitter {
+      color: themed("twitter");
+    }
+    &.instagram {
+      width: 1.4rem;
+      color: $white;
+      border-radius: 3px;
+      padding: 1px 5px;
+      background-image: linear-gradient(
+        45deg,
+        #f09433 0%,
+        #e6683c 25%,
+        #dc2743 50%,
+        #cc2366 75%,
+        #bc1888 100%
+      );
+    }
+    &.github {
+      color: themed("github");
+    }
+    &.linkedin {
+      color: themed("linkedin");
+    }
+    &.mail {
+      color: themed("mail");
+    }
   }
 }

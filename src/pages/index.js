@@ -45,18 +45,7 @@ export default ({ data }) => {
         <hr className="my-3 w-25" />
         <div className="d-md-inline-flex icons-container">
           <a
-            href="https://www.github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FontAwesomeIcon
-              icon={["fab", "github"]}
-              className="icons github"
-              title="Github"
-            />
-          </a>
-          <a
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/ajbitus/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -67,29 +56,51 @@ export default ({ data }) => {
             />
           </a>
           <a
-            href="https://www.freecodecamp.org"
+            href="https://twitter.com/ajbitus"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              icon={["fab", "free-code-camp"]}
-              className="icons fcc"
-              title="FreeCodeCamp"
+              icon={["fab", "twitter"]}
+              className="icons twitter"
+              title="Twitter"
             />
           </a>
           <a
-            href="https://www.hackerrank.com/"
+            href="https://www.facebook.com/ajaykumar.pradhan"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon
-              icon={["fab", "hackerrank"]}
-              className="icons hr"
-              title="Hackerrank"
+              icon={["fab", "facebook"]}
+              className="icons facebook"
+              title="Facebook"
             />
           </a>
           <a
-            href="mailto:johndoe@gmail.com"
+            href="https://www.github.com/ajbitus"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={["fab", "github"]}
+              className="icons github"
+              title="Github"
+            />
+          </a>
+          <a
+            href="https://www.instagram.com/ajay.pradhan/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon
+              icon={["fab", "instagram"]}
+              className="icons instagram"
+              title="Instagram"
+            />
+          </a>
+          <a
+            href="mailto:ajaykpradhan61@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -99,14 +110,27 @@ export default ({ data }) => {
               title="e-mail"
             />
           </a>
-          <a href="../../resume.pdf" target="_blank" download>
-            <FontAwesomeIcon
-              icon={["fas", "file-alt"]}
-              className="icons file"
-              title="Resume"
-            />
-          </a>
         </div>
+        <Container className="py-3 my-3">
+          <p>
+            I am a web developer and programmer living in Bengaluru, India. I
+            develop in both frontend and backend, mostly with JavaScript. Also I
+            experiment with something new now and then.
+          </p>
+          <p>
+            Favourite quote:
+            <br />
+            <i>
+              <b>
+                "
+                {dark
+                  ? `I find your lack of faith disturbing.`
+                  : `You'll Find I'm Full Of Surprises.`}
+                "
+              </b>
+            </i>
+          </p>
+        </Container>
       </Container>
     </PageLayout>
   )

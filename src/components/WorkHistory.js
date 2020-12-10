@@ -45,7 +45,7 @@ export default ({ html, frontmatter, image }) => {
         <Col className="col-md-8 col-1">
           <div className="d-inline-flex">
             {frontmatter.tags.map(tag => (
-              <Badge key={tag} pill className="mr-2 p-0 px-3 resume-tags">
+              <Badge key={tag} pill className="mr-2 p-0 px-3 profile-tags">
                 <h4>
                   <small>{tag}</small>
                 </h4>

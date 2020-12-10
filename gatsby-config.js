@@ -7,16 +7,16 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `John Doe`,
-    author: `John Doe`,
-    firstName: `John`,
-    lastName: `Doe`,
-    description: `John Doe's personal site`,
+    title: `AJbitus`,
+    author: `Ajay Pradhan (AJbitus)`,
+    firstName: `Ajay`,
+    lastName: `Pradhan`,
+    description: `Ajay Pradhan's personal site`,
     occupation: `Software Engineer`,
-    keywords: [`John`, `Doe`, `Personal`, `Blog`, `Resume`, `Projects`, `Work`],
+    keywords: [`Ajay`, `Pradhan`, `Personal`, `Blog`, `Profile`, `Projects`, `Work`],
     siteUrl:
       process.env.URL || process.env.DEPLOY_URL || `http://localhost:8000`,
-    unemployed: true,
+    unemployed: false,
     designations: [
       `Coding Monkey`,
       `Jedi Master`,
@@ -82,7 +82,7 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `standalone`,
-        icon: `${__dirname}/static/favicon.ico`, // This path is relative to the root of the site.
+        icon: `${__dirname}/static/favicon.svg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,
