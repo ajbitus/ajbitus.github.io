@@ -1,1 +1,1 @@
-{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"data":{"site":{"siteMetadata":{"unemployed":true,"firstName":"John","lastName":"Doe","occupation":"Software Engineer"}}},"pageContext":{}}}
+{"componentChunkName":"component---src-pages-index-js","path":"/","result":{"data":{"site":{"siteMetadata":{"unemployed":false,"firstName":"Ajay","lastName":"Pradhan","occupation":"Software Engineer"}}},"pageContext":{}}}
