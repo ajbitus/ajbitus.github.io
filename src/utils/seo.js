@@ -26,8 +26,9 @@ const SEO = ({ description, lang, meta, image: img, title, pathname }) => {
         { property: `og:description`, content: metaDescription },
         { property: `og:type`, content: `website` },
         { name: `twitter:creator`, content: site.siteMetadata.author },
-        { name: `twitter:title`, content: `title` },
+        { name: `twitter:title`, content: title },
         { name: `twitter:description`, content: metaDescription },
+        { name: `twitter:site`, content: `@abjitus` },
       ]
         .concat(
           img

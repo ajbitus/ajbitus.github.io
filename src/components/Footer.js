@@ -49,7 +49,7 @@ export default () => {
           />
         </a>
         <a
-          href="https://www.facebook.com/ajaykumar.pradhan"
+          href="https://www.facebook.com/ajbitus"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -71,7 +71,7 @@ export default () => {
           />
         </a>
         <a
-          href="https://www.instagram.com/ajay.pradhan/"
+          href="https://www.instagram.com/ajbitus/"
           target="_blank"
           rel="noopener noreferrer"
         >
